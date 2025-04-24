@@ -1,0 +1,39 @@
+import React, { useEffect, useState } from 'react'
+import Navbar from './Header';
+import Topbar from './Topbar';
+
+const Menubar = () => {
+
+ const [headerActive, setHeaderActive] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeaderActive(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(headerActive);
+
+
+  return (
+    <>
+       <Topbar />
+        {/* static header */}
+      <div className="relative z-10">
+        <Navbar />
+      </div>
+       {/* animated header */}
+       <div
+        className={`w-full bg-[#a9aebc] transition-transform duration-500 fixed top-0 left-0 z-50 ${
+          headerActive ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <Navbar />
+        </div>
+    </>
+  )
+}
+
+export default Menubar
