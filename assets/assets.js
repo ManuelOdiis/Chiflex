@@ -155,7 +155,9 @@ export const BagIcon = () => {
         "description": "The Nike Air VaporMax Plus looks to the past and propels you into the future. Nodding to the 1998 Air Max Plus with its floating cage, padded upper and heel logo, it adds revolutionary VaporMax Air technology to ramp up the comfort and create a modern look.",
         "price": 168.97,
         "offerPrice": 168.97,
-        "image": [""],
+        "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/9ce851fbec73a4355dfd8d6943e07f326a0ae019/assets/Nike_Air_VaporM_x_Plus-1_image.png",
+          "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_VaporM_x_Plus_image.png"
+        ],
         "category": "Men's Shoes",
         "date": 1738667236865, 
         "_style": 924453-100 
@@ -170,7 +172,9 @@ export const BagIcon = () => {
        "description": "The NOCTA Zoom Drive takes on a new lightweight design—using innovation, technology and premium materials—that elevates the Nike original. Textile and leather combine in the upper. The Zoom Air unit in the heel exposes Air you can feel. And reflective details light up your look.",
        "price": 165,
        "offerPrice": 90.97,
-       "image": [""],
+       "image": ["https:raw.githubusercontent.com/ManuelOdiis/Chiflex/9ce851fbec73a4355dfd8d6943e07f326a0ae019/assets/NOCTA_Zoom_Drive_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/NOCTA_Zoom_Drive_1_image.png"
+       ],
        "category": "Men's Shoes",
        "date": 1738667310300,
        "_style": 5854_001
@@ -183,7 +187,9 @@ export const BagIcon = () => {
        "description": "For Penny devotees and those just looking to refresh their off-court game, we've teamed up with Stüssy to bring you the slick assist your outfit needs. Echoing Stüssy's coveted style, it brings the magic with a premium hemp canvas. The all-black upper keeps 'em easy to style, while visible Nike Air cushioning delivers all-star comfort.",
        "price": 110.97,
        "offerPrice": 110.97,
-       "image": [""],
+       "image": ["https:raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Penny_2_x_St%C3%BCssy_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Penny_2_x_St%C3%BCssy-1_image.png"
+       ],
        "category": "Men's Shoes",
        "date": 1738667366224,
        "_style": 5674_001
@@ -196,7 +202,9 @@ export const BagIcon = () => {
        "description": "A classic boot tough enough for the mountains, yet sleek enough for the streets. Equipped with durable leather on top and rugged tread on the bottom, the Air Max Goadome is ready to take on the elements. Plus, the soft foam midsole and Air units help cushion your journey.",
        "price": 180,
        "offerPrice": 108.97,
-       "image": [""],
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Max_Goadome_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Max_Goadome-1_image.png"
+       ],
        "category": "Men's Boots",
        "date": 1738667417511,
        "_style": 1314_100
@@ -209,7 +217,9 @@ export const BagIcon = () => {
        "description": "Out of the archives, into the wild. After decades of exploration in forests and mountainous terrain, the beloved ACG hiker from '95 is back for more. And just like Dad's dusty old crag-chasers, it comes dressed for adventure. The waterproof upper mixes shaggy suede with textile materials for durability, while hefty tread brings the grip. This weather-ready design helps you get out there—no matter when the outdoors decides to call your name.",
        "price": 160,
        "offerPrice": 120.97,
-       "image": [""],
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_ACG_Torre_Mid_Waterproof_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_ACG_Torre_Mid_Waterproof_image.png"
+       ],
        "category": "Men's Shoes",
        "date": 1738667788883,
        "_style":  1
@@ -218,11 +228,13 @@ export const BagIcon = () => {
     {
         "_id": "67a1f7c93f34a77b6dde915a",
         "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-       "name": "",
+       "name": "Downshifter 13",
        "description": "Whether you’re starting your running journey or an expert eager to switch up your pace, the Downshifter 13 is down for the ride. With a revamped upper and cushion and durability, it helps you find that extra gear or take that first stride toward chasing down your goals.",
        "price": 60.97,
        "offerPrice": 60.97,
-       "image": [""],
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Downshifter_13_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Downshifter_13%2B_image.png"
+       ],
        "category": "Men's Road Running Shoes (Extra Wide)",
        "date": 1738667977644,
        "_style": 1284_001
@@ -235,7 +247,9 @@ export const BagIcon = () => {
        "description": "These slides are designed to help you relax and recharge. Innovative dual-layered foam underfoot pairs with a plush strap to bring the comfort, while the iconic AF1 pivot circle pattern on the outsole and block letter branding casually nod to heritage hoops. What are you waiting for, get lounging." ,
        "price": 40,
        "offerPrice": 32.97,
-       "image": [""],
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Offcourt_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Offcourt_1_image.png"
+       ],
        "category": "Men's Slides",
        "date": 1738668086331,
        "_style": 4639_003
@@ -248,8 +262,11 @@ export const BagIcon = () => {
        "description": "Ditch the laces and get outside. These kicks feature Nike's revolutionary FlyEase technology, making on-and-off a breeze. With a heel that pivots open for a totally hands-free entry, they're great for people with limited mobility—or anyone who wants a quicker way to get going.",
        "price": 100.97,
        "offerPrice": 100.97,
-       "image": [""],
-       "category": "",
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Go_FlyEase_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Go_FlyEase-1_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Go_FlyEase-2_image.png"
+       ],
+       "category": "Unisex Shoes",
        "date": 1738668126660,
        "_style": 5540_002
     },
@@ -261,8 +278,10 @@ export const BagIcon = () => {
        "description": "Excellent fit: also for longer (city) walks, Archetype of work shoe: reinforced toe and heel caps, Oil-tanned Leather: supple, yet durable and water repellent Color",
        "price": 399.00,
        "offerPrice": 399.00,
-       "image": [""],
-       "category": "",
+       "image": ["https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Iron_Ranger_men_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Iron_Ranger_men_1_image.png"
+       ],
+       "category": "Men's Shoes",
        "date": 1738668619198,
        "_style": (8084)
     },
@@ -274,7 +293,9 @@ export const BagIcon = () => {
        "description": "The AAF88 x Billie Eilish is available in two versatile colorways. The perfect addition to your look, these staples complement any outfit you create.",
        "price": 130,
        "offerPrice": 97.97,
-       "image": [""],
+       "image": ["https:/raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Alpha_Force_88_x_Billie_image.png",
+        "https://raw.githubusercontent.com/ManuelOdiis/Chiflex/main/assets/Nike_Air_Alpha_Force_88_x_Billie-1_image.png"
+       ],
        "category": "Men's Shoes",
        "date": 1738667503075,
        "_style": 6763-101

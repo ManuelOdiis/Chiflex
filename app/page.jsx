@@ -1,8 +1,7 @@
 "use client"
-import Banner from '@/components/Banner'
-import FeaturedProduct from '@/components/FeaturedProduct'
+import FeaturedProducts from '@/components/FeaturedProducts'
 import Footer from '@/components/Footer'
-import HeaderSlider from '@/components/HeaderSlider'
+import Hero from '@/components/Hero'
 import HomeProducts from '@/components/HomeProducts'
 import Menubar from '@/components/Menubar'
 import React  from 'react'
@@ -13,12 +12,10 @@ const Home = () => {
     <div className='overflow-hidden'>
       <Menubar />
       <div className="px-6 md:px-16 lg:px-32">
-          <HeaderSlider />
+          <Hero />
+          <FeaturedProducts />
           <HomeProducts />
-          <FeaturedProduct />
-          <Banner />
-          
-        </div>
+         </div>
         <Footer />
     </div>
   )

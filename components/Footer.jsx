@@ -49,9 +49,9 @@ const Footer = () => {
           </div>
            {/*newsletter*/}
            <div className="flex-1 text-border">
-          <h4 className="h4 text-2xl font-semibold text-white mb-10">Newsletter</h4>
+          <h4 className="h4 text-2xl font-semibold text-white mb-10">Get instant update</h4>
           <p className="mb-9">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae a dolor iure odit? Iusto quasi rem neque, blanditiis odit unde maiores nihil libero porro quod, delectus sequi quia facilis ratione?
+          Stay informed about great and exiting offers, new arrivals and trends.
           </p>
           {/*input*/}
           <div className='flex items-center justify-between max-w-2xl w-full md:h-14 h-12'>

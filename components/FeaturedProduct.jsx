@@ -21,6 +21,12 @@ const products = [
     title: "Power in Every Pixel",
     description: "Shop the latest laptops for work, gaming, and more.",
   },
+  {
+    id: 4,
+    image: assets.photo4_image,
+    title: "Power in Every Pixel",
+    description: "Shop the latest laptops for work, gaming, and more.",
+  },
 ];
 
 const FeaturedProduct = () => {
