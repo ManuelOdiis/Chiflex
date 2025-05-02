@@ -1,3 +1,4 @@
+'use client'
 import { RiChat1Line, RiMapPin2Line, RiSmartphoneLine } from "react-icons/ri";
 import Socials from "../../components/Socials";
 import Form from "./Form";
