@@ -79,7 +79,7 @@ const Footer = () => {
         </p>
         <Socials
           containerStyles="flex gap-6 text-orange-600"
-          iconStyles="hover:text-accent transition-all"
+          iconStyles="hover:text-orange-700 transition-all"
         />
       </div>
     </footer>

@@ -17,15 +17,38 @@ const Product = () => {
 
   const [mainImage, setMainImage] = useState(null);
   const [productData, setProductData] = useState(null);
+  
 
   const fetchProductData = async () => {
-    const product = products.find((product) => product._id === id);
-    setProductData(product);
+    try {
+      const productFromContext = products.find((p) => p._id === id);
+      if (productFromContext) {
+        setProductData({
+          ...productFromContext,
+          images: productFromContext.images || [] // Ensure images exists
+        });
+      } else {
+        const res = await fetch(`/api/product/${id}`);
+        const data = await res.json();
+        setProductData({
+          ...data.product,
+          images: data.product.images || [] // Ensure images exists
+        });
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
   };
+  
 
   useEffect(() => {
     fetchProductData();
-  }, [id, products.length]);
+  }, [id, products]);
+
+  if (!productData || !productData._id) {
+    return <Loading />;
+  }
+  
 
   return productData ? (
     <>
@@ -33,18 +56,25 @@ const Product = () => {
       <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="px-5 lg:px-16 xl:px-20">
-            <div className="rounded-lg overflow-hidden bg-gray-500/10 mb-4">
+          <div className="rounded-lg overflow-hidden bg-gray-500/10 mb-4">
               <Image
-                src={mainImage || productData.image[0]}
-                alt="alt"
+                src={
+                  mainImage || 
+                  productData.images?.[0] || 
+                  '/default-product-image.png'
+                }
+                alt={productData.name || "Product image"}
                 className="w-full h-auto object-cover mix-blend-multiply"
                 width={1280}
                 height={720}
+                onError={(e) => {
+                  e.target.src = '/default-product-image.png';
+                }}
               />
             </div>
 
             <div className="grid grid-cols-4 gap-4">
-              {productData.image.map((image, index) => (
+              {productData.images?.map((image, index) => (
                 <div
                   key={index}
                   onClick={() => setMainImage(image)}
@@ -52,10 +82,10 @@ const Product = () => {
                 >
                   <Image
                     src={image}
-                    alt="alt"
+                    alt={`Thumbnail ${index + 1}`}
                     className="w-full h-auto object-cover mix-blend-multiply"
-                    width={1280}
-                    height={720}
+                    width={300}
+                    height={300}
                   />
                 </div>
               ))}

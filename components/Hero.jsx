@@ -3,8 +3,12 @@ import Pretitle from "./Pretitle";
 import Button from "@/app/contact/Button";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { useAppContext } from "@/context/AppContext";
 
 const Hero = () => {
+
+const { router } = useAppContext
+
   return (
     <div className="p16 xl:pt-32" id="product hero">
       <div className="container mx-auto">

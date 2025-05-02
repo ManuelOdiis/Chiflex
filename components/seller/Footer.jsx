@@ -15,7 +15,9 @@ const Footer = () => {
         </p>
       </div>
       <div>
-        <Socials />
+        <Socials 
+        containerStyles="flex gap-6 text-orange-700" iconStyles="hover:text-orange-500 transition-all"
+        />
       </div>
     </div>
   );

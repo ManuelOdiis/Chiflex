@@ -71,7 +71,7 @@ const FeaturedProducts = () => {
                 </div>
                 <Link
                   href={item.href}
-                  className="w-[44px] xl:w-[40px] xl:h-[40px] h-[44px] xl:mt-8 bg-orange-600 text-primary text-2xl flex justify-center items-center absolute right-3"
+                  className="w-[44px] xl:w-[40px] xl:h-[40px] h-[44px] xl:mt-8 xs: mt-10 sm:mt-10 bg-orange-600 text-#121315 text-2xl flex justify-center items-center absolute right-3"
                 >
                   <RiArrowRightUpLine />
                 </Link>

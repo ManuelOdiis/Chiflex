@@ -4,11 +4,15 @@ import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 
 const ProductCard = ({ product }) => {
-  if (!product) return null;
+  console.log("Frontend product data:", product);
+  if (!product) return <div>Product not found</div>;
 
   const { currency, router } = useAppContext();
 
-  const productImage = product.image?.[0] || null;
+  const productImage = product?.images?.[0] ? product.images[0]
+  : '/default-product-image.png';
+
+  
 
   return (
     <div
@@ -25,6 +29,9 @@ const ProductCard = ({ product }) => {
           className="group-hover:scale-105 transition object-cover w-4/5 h-4/5 md:w-full md:h-full"
           width={800}
           height={800}
+          onError={(e) => {
+            e.target.src = '/default-product-image.png';
+          }}
         />
         <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
           <Image className="h-3 w-3" src={assets.heart_icon} alt="heart_icon" />
