@@ -12,8 +12,8 @@ const productSchema = new mongoose.Schema({
 }, { collection: 'products' }); // Explicit collection name
 
 // Clear any existing model
-delete mongoose.connection.models['Product'];
+delete mongoose.connection.models['product'];
 
-const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
+const Product = mongoose.models.Product || mongoose.model('product', productSchema);
 
 export default Product

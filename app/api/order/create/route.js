@@ -13,14 +13,25 @@ export async function POST(request) {
         const { address, items } = await request.json();
 
         if (!address || items.length === 0) {
-            return NextResponse.json({success: false, message: 'invalid data'});
+            return NextResponse.json({success: false, message: 'Invalid data'});
         }
 
-        // calculat amount using the item
-        const amount = await items.reduce(async (acc, item) => {
-             const product = await Product.findById(item.Product);
-             return acc + product.offerPrice * item.quantity
-        },0)
+        // calculate amount using the item
+        let amount = 0;
+        for (const item of items) {
+            try {
+                const product = await Product.findById(item.product);
+                if (product) {
+                    amount += product.offerPrice * item.quantity;
+                } else {
+                    console.warn(`Product not found: ${item.product}`);
+                }
+            } catch (error) {
+                console.error(`Error processing product ${item.product}:`, error);
+            }
+        }
+     
+        
 
         await inngest.send({
             name: 'order/created',
