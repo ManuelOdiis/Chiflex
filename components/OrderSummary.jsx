@@ -1,32 +1,43 @@
-import { addressDummyData } from "@/assets/assets";
+import { addressDummyData, assets } from "@/assets/assets";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const OrderSummary = () => {
-  const { currency, router, getCartCount, getCartAmount, getToken, user, cartItems, setCartItems } = useAppContext();
+  const {
+    currency,
+    router,
+    getCartCount,
+    getCartAmount,
+    getToken,
+    user,
+    cartItems,
+    setCartItems,
+  } = useAppContext();
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isPlaceOrderClicked, setIsPlaceOrderClicked] = useState(false);
 
   const [userAddresses, setUserAddresses] = useState([]);
 
   const fetchUserAddresses = async () => {
     try {
-      
-      const token = await getToken()
-      const { data } = await axios.get('/api/user/get-address', {headers:{Authorization: `Bearer ${token}`}})
+      const token = await getToken();
+      const { data } = await axios.get("/api/user/get-address", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       if (data.success) {
-        setUserAddresses(data.addresses)
+        setUserAddresses(data.addresses);
         if (data.addresses.length > 0) {
-          setSelectedAddress(data.addresses[0])
-        }else {
-          toast.error(data.message)
+          setSelectedAddress(data.addresses[0]);
+        } else {
+          toast.error(data.message);
         }
       }
-
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     }
   };
 
@@ -37,79 +48,91 @@ const OrderSummary = () => {
 
   const createOrder = async () => {
     try {
-      
       if (!selectedAddress) {
-        return toast.error('Please select an address')
+        return toast.error("Please select an address");
       }
 
-      let cartItemsArray = Object.keys(cartItems).map((key) => ({product:key, quantity:cartItems[key]}))
-     
-      cartItemsArray = cartItemsArray.filter(item => item.quantity > 0)
+      let cartItemsArray = Object.keys(cartItems).map((key) => ({
+        product: key,
+        quantity: cartItems[key],
+      }));
+
+      cartItemsArray = cartItemsArray.filter((item) => item.quantity > 0);
 
       if (cartItemsArray.length === 0) {
-        return toast.error('Cart is empty')
+        return toast.error("Cart is empty");
       }
 
-      const token = await getToken()
+      const token = await getToken();
 
-      const { data } = await axios.post('/api/order/create', {
-        address: selectedAddress._id,
-        items: cartItemsArray,
-      }, {
-        headers: {Authorization: `Bearer ${token}`}
-      })
+      const { data } = await axios.post(
+        "/api/order/create",
+        {
+          address: selectedAddress._id,
+          items: cartItemsArray,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       if (data.success) {
-        toast.success(data.message)
-        setCartItems({})
-        router.push('/order-placed')
-      }else {
-        toast.error(data.message)
+        toast.success(data.message);
+        setCartItems({});
+        router.push("/order-placed");
+      } else {
+        toast.error(data.message);
       }
-
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     }
   };
 
   const createOrderStripe = async () => {
     try {
       if (!selectedAddress) {
-        return toast.error('Please select an address')
+        return toast.error("Please select an address");
       }
 
-      let cartItemsArray = Object.keys(cartItems).map((key) => ({product:key, quantity:cartItems[key]}))
-     
-      cartItemsArray = cartItemsArray.filter(item => item.quantity > 0)
+      let cartItemsArray = Object.keys(cartItems).map((key) => ({
+        product: key,
+        quantity: cartItems[key],
+      }));
+
+      cartItemsArray = cartItemsArray.filter((item) => item.quantity > 0);
 
       if (cartItemsArray.length === 0) {
-        return toast.error('Cart is empty')
+        return toast.error("Cart is empty");
       }
 
-      const token = await getToken()
+      const token = await getToken();
 
-      const { data } = await axios.post('/api/order/stripe', {
-        address: selectedAddress._id,
-        items: cartItemsArray,
-      }, {
-        headers: {Authorization: `Bearer ${token}`}
-      })
+      const { data } = await axios.post(
+        "/api/order/stripe",
+        {
+          address: selectedAddress._id,
+          items: cartItemsArray,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       if (data.success) {
-        window.location.href = data.url 
-      }else {
-        toast.error(data.message)
+        window.location.href = data.url;
+      } else {
+        toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     }
-  }
+  };
 
   useEffect(() => {
     if (user) {
-       fetchUserAddresses();
+      fetchUserAddresses();
     }
-   }, [user]);
+  }, [user]);
 
   return (
     <div className="w-full md:w-96 bg-gray-500/5 p-5">
@@ -220,12 +243,29 @@ const OrderSummary = () => {
         </div>
       </div>
 
-      <button
-        onClick={createOrderStripe}
-        className="w-full bg-orange-600 text-white py-3 mt-5 hover:bg-orange-700"
-      >
-        Place Order
-      </button>
+      {!isPlaceOrderClicked ? (
+        <button
+          onClick={() => setIsPlaceOrderClicked(true)}
+          className="w-full bg-orange-600 text-white py-3 mt-5 hover:bg-orange-700"
+        >
+          Place Order
+        </button>
+      ) : (
+        <div className="flex gap-2">
+          <button
+            onClick={createOrder}
+            className="w-full bg-orange-600 text-white py-2 mt-5 hover:bg-orange-700"
+          >
+            Cash On Delivery
+          </button>
+          <button
+            onClick={createOrderStripe}
+            className="w-full flex justify-center items-center border border-indigo-500 bg-white hover:bg-gray-100 py-2 mt-5 "
+          >
+            <Image className="w-12" src={assets.Stripe_logo} alt="" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

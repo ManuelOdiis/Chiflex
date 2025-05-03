@@ -17,19 +17,20 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      
-      const token = await getToken()
+      const token = await getToken();
 
-      const {data} = await axios.get('/api/order/list', {headers:{Authorization: `Bearer ${token}`}})
+      const { data } = await axios.get("/api/order/list", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       if (data.success) {
-       setOrders(data.orders.reverse())
-       setLoading(false) 
-      }else {
-        toast.error(data.message)
+        setOrders(data.orders.reverse());
+        setLoading(false);
+      } else {
+        toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     }
   };
 
@@ -90,11 +91,11 @@ const MyOrders = () => {
                   </p>
                   <div>
                     <p className="flex flex-col">
-                      <span>Method : COD</span>
+                      <span>Method : {order.paymentType || "COD"}</span>
                       <span>
                         Date : {new Date(order.date).toLocaleDateString()}
                       </span>
-                      <span>Payment : Pending</span>
+                      <span>Payment : {order.isPaid ? "paid" : "pending"}</span>
                     </p>
                   </div>
                 </div>

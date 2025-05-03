@@ -16,21 +16,21 @@ const Orders = () => {
 
   const fetchSellerOrders = async () => {
     try {
-      
-      const token = await getToken()
+      const token = await getToken();
 
-      const {data} = await axios.get('/api/order/seller-orders', {headers: {Authorization:`Bearer ${token}`}})
+      const { data } = await axios.get("/api/order/seller-orders", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       if (data.success) {
-        setOrders(data.orders)
-        setLoading(false)
+        setOrders(data.orders);
+        setLoading(false);
       } else {
-        toast.error(data.message)
+        toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     }
-    
   };
 
   useEffect(() => {
@@ -88,11 +88,11 @@ const Orders = () => {
                 </p>
                 <div>
                   <p className="flex flex-col">
-                    <span>Method : COD</span>
+                    <span>Method : {order.paymentType || "COD"}</span>
                     <span>
                       Date : {new Date(order.date).toLocaleDateString()}
                     </span>
-                    <span>Payment : Pending</span>
+                    <span>Payment : {order.isPaid ? "paid" : "pending"}</span>
                   </p>
                 </div>
               </div>

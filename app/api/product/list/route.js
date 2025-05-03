@@ -18,8 +18,8 @@ export async function GET(request) {
         category: product.category,
         description: product.description,
         images: Array.isArray(product.images) ? product.images : [], // Ensure images is always an array
-        price: product.price,         
-      offerPrice: product.offerPrice,
+        price: product.price,
+        offerPrice: product.offerPrice,
       })),
     });
   } catch (error) {

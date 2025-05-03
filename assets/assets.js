@@ -54,9 +54,10 @@ import photo2_image from "./photo2_image.jpg"
 import photo3_image from "./photo3_image.jpg"
 import photo4_image from "./photo4_image.jpg"
 import checkmark from "./checkmark.png"
-
+import Stripe_logo from "./stripe_logo.png"
 export const assets = {
     logo,
+    Stripe_logo,
     search_icon,
     user_icon,
   cart_icon,
