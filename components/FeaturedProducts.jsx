@@ -24,7 +24,7 @@ const productData = [
     href: "/all-products",
   },
   {
-    img: "/assets/Photo6.jfif",
+    img: "/assets/shoe5.jpeg",
     name: "Explore Casual Comfort",
     description: "for laid-back elegance",
     href: "/all-products",
