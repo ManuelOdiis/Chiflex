@@ -35,7 +35,7 @@ const FeaturedProducts = () => {
   return (
     <div className="pt-16 xl:pt-32" id="projects">
       <div className="container max-auto">
-        <div className="text-center max-w-[540px] mx-auto xl:mb-20">
+        <div className="text-center max-w-[540px] mx-auto xl:mb-20 dark:text-slate-200">
           <Pretitle text="Featured Products" center />
           <h2 className="h2 mb-3">Discover Our Collections</h2>
           <p className="mb-11 max:w-[480px] mx-auto">

@@ -14,6 +14,7 @@ import {
 import { RiMenu3Fill } from "react-icons/ri";
 import Logo from "./Logo";
 import Socials from "./Socials";
+import { ThemeToggle } from "./ThemeToggler";
 
 const links = [
   {
@@ -48,14 +49,16 @@ const NavMobile = () => {
       >
         <RiMenu3Fill />
       </SheetTrigger>
-      <SheetContent className="bg-[#a9aebc] border-none text-white">
+      <SheetContent className="bg-[#a9aebc] dark:bg-slate-800/[0.3] dark:backdrop-blur-lg dark:border-r dark:border-slate-700/30 border-none text-white">
         <div className="flex flex-col pt-16 pb-8 items-center justify-between h-full">
           <SheetHeader>
             <SheetTitle>
               {" "}
               <Logo />{" "}
+              <ThemeToggle />
             </SheetTitle>
             <SheetDescription className="sr-only"></SheetDescription>
+            
           </SheetHeader>
           <ul className="w-full flex flex-col gap-10 justify-center text-center">
             {links.map((link, index) => {

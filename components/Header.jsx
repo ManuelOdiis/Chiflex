@@ -13,7 +13,7 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
 
   return (
-    <nav className="flex gap-5 items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
+    <nav className="flex gap-3 sm:gap-5 items-center justify-between px-4 sm:px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700 dark:text-slate-200">
       <Image
         className="cursor-pointer w-28 md:w-32"
         onClick={() => router.push("/")}
@@ -21,16 +21,16 @@ const Navbar = () => {
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-gray-900 hover:dark:text-white transition">
           Home
         </Link>
-        <Link href="/all-products" className="hover:text-gray-900 transition">
+        <Link href="/all-products" className="hover:text-gray-900 hover:dark:text-white transition">
           Shop
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-gray-900 hover:dark:text-white transition">
           About Us
         </Link>
-        <Link href="/contact" className="hover:text-gray-900 transition">
+        <Link href="/contact" className="hover:text-gray-900 hover:dark:text-white transition">
           Contact
         </Link>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
         ) : (
           <button
             onClick={openSignIn}
-            className="flex items-center gap-2 hover:text-gray-900 transition"
+            className="flex items-center gap-2 hover:text-gray-900 hover:dark:text-white transition dark:text-slate-200"
           >
             <Image src={assets.user_icon} alt="user icon" />
             Account
@@ -76,11 +76,11 @@ const Navbar = () => {
         )}
       </ul>
 
-      <div className="flex items-center md:hidden gap-3">
+      <div className="flex items-center md:hidden gap-3 ">
         {isSeller && (
           <button
             onClick={() => router.push("/seller")}
-            className="text-xs border px-4 py-1.5 rounded-full"
+            className="text-xs border px-4 py-1.5 rounded-full "
           >
             Seller Dashboard
           </button>

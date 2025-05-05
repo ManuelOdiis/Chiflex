@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="mt-16 xl:mt-32 bg-[#E6E9F2] ">
+    <footer className="mt-16 xl:mt-32 bg-[#E6E9F2] dark:bg-slate-700/[.3]">
       <div className="container mx-auto">
         <div className="py-16 xl:py-[100px] flex flex-col xl:flex-row gap-[60px] xl:gap[30px]">
           {/*logo&text*/}
@@ -23,15 +23,15 @@ const Footer = () => {
             <Link href="/" className="flex mb-6">
               <Image src={assets.logo} width={160} height={180} alt="logo" />
             </Link>
-            <p className="text-gray-500 max-w-[270px]">
+            <p className="text-gray-500 max-w-[270px] dark:text-slate-300">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quo
               quasi ipsam quis laborum provident eveniet quaerat facilis et
               optio.
             </p>
           </div>
           {/*contact*/}
-          <div className="flex-1 text-border">
-            <h4 className="h4 text-2xl font-semibold text-white mb-10">
+          <div className="flex-1 text-border dark:text-slate-300">
+            <h4 className="h4 text-2xl font-semibold text-white mb-10 ">
               Contact
             </h4>
             <ul className="flex flex-col gap-6">
@@ -54,7 +54,7 @@ const Footer = () => {
             <h4 className="h4 text-2xl font-semibold text-white mb-10">
               Get instant update
             </h4>
-            <p className="mb-9">
+            <p className="mb-9 dark:text-slate-300">
               Stay informed about great and exiting offers, new arrivals and
               trends.
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
       </div>
       {/*copyright*/}
       <div className="contaner mx-auto xl:px-8 py-12 border-t border-border/8 flex flex-col gap-6 xl:flex-row items-center justify-between">
-        <p className="text-border">
+        <p className="text-border dark:text-slate-300">
           Copyright &copy; {year} Chiflex. All rights reserved
         </p>
         <Socials

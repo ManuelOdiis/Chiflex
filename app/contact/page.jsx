@@ -15,10 +15,10 @@ const Contact = () => {
             <div className="flex flex-col xl:flex-row h-full gap-[40px] xl:gap-[90px]">
               {/*info*/}
               <div className="w-full xl:max-w-[380px] xl:pr[70px]xl:border-r xl:border-border/40 h-640px]">
-                <h4 className="text-[26px] font-primary font-bold mb-6">
+                <h4 className="text-[26px] font-primary font-bold mb-6 dark:text-slate-100">
                   Contact Us
                 </h4>
-                <p className="mb-9">
+                <p className="mb-9 dark:text-slate-300">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Beatae veritatis illo quisquam repellat, iusto incidunt! Quas
                   esse quae est id nesciunt velit ut hic. Accusantium
@@ -29,56 +29,56 @@ const Contact = () => {
                   {/*contact item*/}
                   <div className="flex items-start gap-[20px]">
                     <div>
-                      <RiChat1Line className="text-[28px] text-accent" />
+                      <RiChat1Line className="text-[28px] text-orange-500" />
                     </div>
                     <div>
-                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2">
+                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2 dark:text-slate-100">
                         Chat with us
                       </h5>
-                      <p className="m-4">Our friendly team is here to help</p>
-                      <p className="font-semibold font-primary">
+                      <p className="m-4 dark:text-slate-300">Our friendly team is here to help</p>
+                      <p className="font-semibold font-primary dark:text-slate-300">
                         Here@Chiflex.com
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-[20px]">
                     <div>
-                      <RiMapPin2Line className="text-[28px] text-accent" />
+                      <RiMapPin2Line className="text-[28px] text-orange-500" />
                     </div>
                     <div>
-                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2">
+                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2 dark:text-slate-100">
                         Office
                       </h5>
-                      <p className="m-4">Come and say hello at our Office</p>
-                      <p className="font-semibold font-primary">
+                      <p className="m-4 dark:text-slate-300">Come and say hello at our Office</p>
+                      <p className="font-semibold font-primary dark:text-slate-300">
                         1250 Brickstone Ave, Dallas, TX 75201, USA
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-[20px]">
                     <div>
-                      <RiSmartphoneLine className="text-[28px] text-accent" />
+                      <RiSmartphoneLine className="text-[28px] text-orange-500" />
                     </div>
                     <div>
-                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2">
+                      <h5 className="text-[22px] font-semibold font-primary leading-none mb-2 dark:text-slate-100">
                         Phone
                       </h5>
-                      <p className="m-4">Mon-Sat 8am-5pm</p>
-                      <p className="font-semibold font-primary">
+                      <p className="m-4 dark:text-slate-300">Mon-Sat 8am-5pm</p>
+                      <p className="font-semibold font-primary dark:text-slate-300">
                         +1 (555) 000-0000
                       </p>
                     </div>
                   </div>
                 </div>
                 <Socials
-                  containerStyles="flex gap-[40px]"
+                  containerStyles="flex gap-[40px] text-orange-600"
                   iconStyles="text-primary text-[20px]"
                 />
               </div>
               {/*form*/}
               <div className="flex-1">
-                <h2 className="h2 mb-3">Request An Order</h2>
-                <p className="mb-9">
+                <h2 className="h2 mb-3 dark:text-slate-100">Request An Order</h2>
+                <p className="mb-9 dark:text-slate-300">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                   fugiat, laboriosam a dignissimos voluptatem, fugit doloremque
                   asperiores velit excepturi molestias recusandae praesentium

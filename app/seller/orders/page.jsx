@@ -45,8 +45,8 @@ const Orders = () => {
         <Loading />
       ) : (
         <div className="md:p-10 p-4 space-y-5">
-          <h2 className="text-lg font-medium">Orders</h2>
-          <div className="max-w-4xl rounded-md">
+          <h2 className="text-lg font-medium dark:text-slate-100">Orders</h2>
+          <div className="max-w-4xl rounded-md dark:text-slate-300">
             {orders.map((order, index) => (
               <div
                 key={index}

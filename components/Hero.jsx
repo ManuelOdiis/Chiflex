@@ -18,11 +18,11 @@ const { router } = useAppContext
             <div className="max-w-[540px]">
               {/* prtitle */}
               <Pretitle text="Shop now" />
-              <h2 className="h2 text-[36px] leading-[1:3] xl:text[46px] xl:leading-[56px] capitalize font-bold ">
+              <h2 className="h2 text-[36px] leading-[1:3] xl:text[46px] xl:leading-[56px] capitalize font-bold dark:text-slate-200">
                 Discover stylish and comfortable footwear from Chiflex Shop,
                 your go-to destination for quality shoes.
               </h2>
-              <p className="mb-11">
+              <p className="mb-11 dark:text-slate-300">
                 the idea is simple, connect you with the perfect pair of shoes
                 that express your unique style
               </p>

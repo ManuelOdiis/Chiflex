@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex items-center gap-4">
         <Logo className="hidden md:block" />
         <div className="hidden md:block h-7 w-px bg-gray-500/60"></div>
-        <p className="py-4 text-center text-xs md:text-sm text-gray-500">
+        <p className="py-4 text-center text-xs md:text-sm text-gray-500 dark:text-slate-300">
           Copyright &copy; {year} Chiflex. All rights reserved
         </p>
       </div>

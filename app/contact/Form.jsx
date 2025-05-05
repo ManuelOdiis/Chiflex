@@ -14,16 +14,16 @@ import Button from "./Button";
 const Form = () => {
   return (
     <form className="flex flex-col">
-      <div className="flex flex-col gap-[20px] mb-[20px]">
+      <div className="flex flex-col gap-[20px] mb-[20px] dark:text-slate-200">
         <Input type="fullname" placeholder="Full Name" />
         <Input type="email" placeholder="Email Address" />
         <div className="flex flex-col xl:flex-row gap-[20px]">
           <Input type="phone" placeholder="phone number" />
           <Select>
-            <SelectTrigger className="w-full rounded-none h-[54px] text-secondary outline-none">
+            <SelectTrigger className="w-full rounded-none h-[54px] text-secondary outline-none dark:text-slate-200">
               <SelectValue placeholder="Select  Service"></SelectValue>
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="dark:text-slate-200">
               <SelectGroup>
                 <SelectLabel>Select Service</SelectLabel>
                 <SelectItem value="cash on delivery">
@@ -42,7 +42,7 @@ const Form = () => {
       {/*textarea*/}
       <div className="flex flex-col gap-6">
         <Textarea
-          className="h-[180px] resize-none rounded-none"
+          className="h-[180px] resize-none rounded-none dark:text-slate-200"
           placeholder="Enter your message"
         />
         {/*btn*/}

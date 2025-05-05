@@ -70,7 +70,7 @@ const { getToken } = useAppContext()
     <div className="flex-1 min-h-screen flex flex-col justify-between">
       <form onSubmit={handleSubmit} className="md:p-10 p-4 space-y-5 max-w-lg">
         <div>
-          <p className="text-base font-medium">Product Image</p>
+          <p className="text-base font-medium dark:text-slate-100">Product Image</p>
           <div className="flex flex-wrap items-center gap-3 mt-2">
             {[...Array(4)].map((_, index) => (
               <label key={index} htmlFor={`image${index}`}>
@@ -101,7 +101,7 @@ const { getToken } = useAppContext()
           </div>
         </div>
         <div className="flex flex-col gap-1 max-w-md">
-          <label className="text-base font-medium" htmlFor="product-name">
+          <label className="text-base font-medium dark:text-slate-100" htmlFor="product-name">
             Product Name
           </label>
           <input
@@ -116,7 +116,7 @@ const { getToken } = useAppContext()
         </div>
         <div className="flex flex-col gap-1 max-w-md">
           <label
-            className="text-base font-medium"
+            className="text-base font-medium dark:text-slate-100"
             htmlFor="product-description"
           >
             Product Description
@@ -133,7 +133,7 @@ const { getToken } = useAppContext()
         </div>
         <div className="flex items-center gap-5 flex-wrap">
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="category">
+            <label className="text-base font-medium dark:text-slate-100" htmlFor="category">
               Category
             </label>
             <select
@@ -152,7 +152,7 @@ const { getToken } = useAppContext()
             </select>
           </div>
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="product-price">
+            <label className="text-base font-medium dark:text-slate-100" htmlFor="product-price">
               Product Price
             </label>
             <input
@@ -166,7 +166,7 @@ const { getToken } = useAppContext()
             />
           </div>
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="offer-price">
+            <label className="text-base font-medium dark:text-slate-100" htmlFor="offer-price">
               Offer Price
             </label>
             <input
